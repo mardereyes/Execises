@@ -1,0 +1,25 @@
+Perkbox login test scenarios:
+
+Account log in:
+
+ Positive:
+ 1- Use valid user email: User should be redirected to page displaying available list of accounts.
+ 2- Select any account and click on `confirm`: User should be redirected to account login page, with email pre populated.
+ 2.1 - Click on Back arrow: User is sent to previous page.
+ 3- Click on confirm button: User should be redirected to related account.
+ 3.1 - Reloading page: User is sent back to first login page.
+
+
+ Negative - first login form: 
+ 1- Use unregistered user email: User should be displayed with error message `User is not found`.
+ 2- Use malformed user email: User should be displayed with error message `This email address is not valid`.
+ 3- Inject JS code that executes any malicious action: User should be displayed with error message `This email address is not valid`.
+
+ Negative - select account
+ 1- Don't select any account and click on `confirm`: Nothing happens (user should be able to see an error message here though)
+
+Not part of login functionality, but present on the page:
+
+1- Make sure any links available redirect to correct URL.
+2- Make sure any buttons open up related pop ups (for example `Hi there` pop up)
+3- All `X` (close) buttons close pop ups for example `Hi there` pop up)
